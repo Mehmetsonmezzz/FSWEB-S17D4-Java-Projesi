@@ -31,19 +31,20 @@ Aşağıda istenilen sonuçlara ulaşabilmek için gerekli SQL sorgularını alt
 
 	
 	2) Öğrenci tablosundaki öğrencinin adını ve soyadını ve sınıfını listeleyin.
-	
+		 SELECT ograd,ogrsoyad,sinif FROM ogrenci
 	
 	3) Öğrenci tablosundaki kız öğrencileri listeleyin. 
 	
-	
+		 SELECT * FROM ogrenci WHERE cinsiyet='K'
+ 
 	4) Öğrenci tablosunda kaydı bulunan sınıfların adını her sınıf bir kez görüntülenecek şekilde listeleyiniz
-	
+	 SELECT DISTINCT sinif FROM ogrenci 
 	
 	5) Öğrenci tablosunda, 10A sınıfında olan kız öğrencileri listeleyiniz.
-	
+	 SELECT * FROM ogrenci WHERE sinif='10A' AND cinsiyet ='K'
 	
 	6) Öğrenci tablosundaki 10A veya 10B sınıfındaki öğrencilerin adını, soyadını ve sınıfını listeleyiniz.
-	
+	 SELECT * FROM ogrenci WHERE sinif='10A' OR sinif ='10B'
 	
 	7) Öğrenci tablosundaki öğrencinin adını, soyadını ve numarasını okul numarası olarak listeleyiniz. (as kullanım örneği)
 	
